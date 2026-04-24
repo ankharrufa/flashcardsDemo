@@ -1,0 +1,36 @@
+{
+  "title": "Cognitive Load Theory",
+  "description": "A foundational theory of instructional design proposing that learning is constrained by the limited capacity of working memory.",
+  "sections": [
+    {
+      "id": "clt-overview",
+      "title": "Overview and Origin",
+      "body": "Cognitive Load Theory (CLT) was developed by John Sweller in 1988, initially while studying problem-solving in mathematics education. Sweller observed that conventional problem-solving tasks demanded so much mental effort from novice learners that little capacity was left over to form the reusable knowledge structures — schemas — that lead to genuine learning. The theory proposes that the human cognitive architecture, specifically the severely limited capacity of working memory, is the central constraint on learning. Effective instructional design must therefore manage the cognitive demands placed on learners at every stage."
+    },
+    {
+      "id": "clt-three-types",
+      "title": "The Three Types of Cognitive Load",
+      "body": "CLT distinguishes three types of cognitive load that together occupy working memory during learning. Intrinsic load is inherent to the material itself — it is determined by the number of elements that must be processed simultaneously (element interactivity). Simple facts (low interactivity) impose little intrinsic load; understanding algebraic equations that require holding multiple interacting variables in mind at once imposes high intrinsic load. Extraneous load is caused by poor instructional design — information presented in a confusing format, or content split across separate sources that must be mentally integrated, all add load that contributes nothing to learning. Germane load refers to the cognitive effort associated with constructing and automating schemas. Only extraneous load should be minimised; intrinsic load defines the learning challenge and germane load is the learning itself. Later work by Kalyuga and Sweller has questioned whether germane load is truly distinct from intrinsic load, suggesting a simpler two-component model may be more theoretically rigorous."
+    },
+    {
+      "id": "clt-working-memory",
+      "title": "Working Memory and Long-Term Memory",
+      "body": "Working memory is the cognitive system in which conscious thought occurs. It can hold approximately 4 ± 1 elements simultaneously (Miller's classic estimate of 7 ± 2 is now considered an overestimate for meaningful learning contexts) and retains information for only around 20 seconds without active rehearsal. When more elements must be integrated simultaneously than working memory can hold, cognitive overload occurs and learning degrades. Crucially, long-term memory interacts with working memory in a way that effectively bypasses this bottleneck: well-formed schemas stored in long-term memory can be retrieved as single elements, allowing experts to handle complex material that would overwhelm novices. This interaction between working memory capacity and long-term memory schema explains why expertise radically transforms the experience of learning new related material."
+    },
+    {
+      "id": "clt-worked-examples",
+      "title": "The Worked Example Effect",
+      "body": "The worked example effect is one of CLT's most replicated findings. Novice learners who study fully worked-out problem solutions acquire schemas more quickly and with less effort than those who attempt to solve equivalent problems themselves. Conventional problem-solving requires learners to simultaneously maintain a goal state, current state, and multiple sub-goals while searching for operators to bridge the gap — a process called means-ends analysis that consumes working memory without necessarily promoting schema formation. Worked examples reduce this overhead by externalising the solution steps, allowing working memory to focus on understanding relationships between steps. The completion problem effect extends this: partially completed solutions (some steps given, student finishes the rest) bridge the transition from full worked examples to independent problem-solving. The practical implication for instruction is a fading procedure — start with full worked examples and systematically reduce guidance as learner expertise develops."
+    },
+    {
+      "id": "clt-split-attention",
+      "title": "The Split-Attention Effect",
+      "body": "The split-attention effect occurs when learners must mentally integrate multiple sources of information that are presented separately. A classic example is a diagram with a legend placed apart from it: the learner must hold the diagram in working memory while reading the legend, then integrate the two — using working memory capacity purely for navigation rather than for understanding. The design solution is physical integration: embed labels directly on diagrams, place explanatory text immediately adjacent to the relevant visual element, and avoid separating information sources that must be combined to make sense. Split-attention is distinct from but related to the redundancy effect: split-attention argues for integrating necessary sources; redundancy argues for eliminating sources that duplicate information already fully conveyed by another. Both are strategies for managing the number and arrangement of information sources to reduce extraneous load."
+    },
+    {
+      "id": "clt-expertise-reversal",
+      "title": "The Expertise Reversal Effect",
+      "body": "The expertise reversal effect reveals that instructional techniques optimal for novices become less effective — and can become actively harmful — as learners gain expertise. Detailed worked examples, step-by-step guidance, and integrated diagrams help novices because they lack the schemas needed to make sense of material without support. As learners acquire those schemas, the same support becomes redundant: processing it consumes working memory without adding new knowledge, a form of extraneous load. Advanced learners perform better with reduced guidance, minimal worked examples, and independent problem-solving challenges. This finding has significant implications: no single instructional strategy is universally optimal, and effective instruction must adapt to changing learner expertise. It also connects to the concept of desirable difficulties, which holds that introducing certain challenges (retrieval practice, interleaving, spacing) can enhance long-term retention even at the cost of short-term performance — because the effortful processing they require drives deeper encoding."
+    }
+  ]
+}

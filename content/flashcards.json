@@ -1,0 +1,188 @@
+[
+  {
+    "id": "card-001",
+    "active_version": "original",
+    "topic": "Cognitive Load Theory",
+    "source_id": "clt-overview",
+    "spacing": "default",
+    "next_due_day": 0,
+    "interval_index": 0,
+    "versions": {
+      "original": {
+        "question": "What is cognitive load theory, and who developed it?",
+        "answer": "A theory developed by John Sweller (1988) proposing that learning is constrained by the limited capacity of working memory, and that instructional design should manage the cognitive demands placed on learners."
+      },
+      "zoom_in_0": {
+        "question": "What observation led Sweller to develop cognitive load theory?",
+        "answer": "While studying mathematics education, Sweller observed that conventional problem-solving tasks consumed so much working memory in means-ends analysis that learners had little capacity left to form reusable schemas — the structures that constitute genuine learning."
+      },
+      "zoom_in_1": {
+        "question": "What is the specific cognitive mechanism that cognitive load theory centres on?",
+        "answer": "Working memory can hold approximately 4 elements simultaneously. When the cognitive demands of a task exceed this capacity, schema formation is blocked — the learner is processing but not truly learning."
+      },
+      "zoom_out_0": {
+        "question": "How does cognitive load theory fit within the broader field of educational psychology?",
+        "answer": "It connects information processing theory (working memory limits) to practical instructional design guidelines, making it one of the most applied theories in education — a bridge between cognitive science and classroom practice."
+      },
+      "zoom_out_1": {
+        "question": "Why does cognitive load theory matter for instructional design across all domains?",
+        "answer": "It provides evidence-based principles for reducing unnecessary mental effort, ensuring learners use their limited working memory to build long-term schemas rather than to manage poorly structured instruction."
+      }
+    }
+  },
+  {
+    "id": "card-002",
+    "active_version": "original",
+    "topic": "Cognitive Load Theory",
+    "source_id": "clt-three-types",
+    "spacing": "default",
+    "next_due_day": 0,
+    "interval_index": 0,
+    "versions": {
+      "original": {
+        "question": "What are the three types of cognitive load?",
+        "answer": "Intrinsic load (inherent complexity of the material), extraneous load (load caused by poor instructional design), and germane load (load associated with schema formation and automation)."
+      },
+      "zoom_in_0": {
+        "question": "What determines the level of intrinsic cognitive load for a given piece of content?",
+        "answer": "Element interactivity — the number of elements that must be held in working memory and processed simultaneously to understand the material. Simple isolated facts are low-interactivity; algebraic equations requiring multiple interacting variables are high-interactivity."
+      },
+      "zoom_in_1": {
+        "question": "What distinguishes extraneous from germane cognitive load?",
+        "answer": "Extraneous load wastes working memory on irrelevant processing caused by poor design; germane load is productive — it is the effort of actively constructing and automating schemas. Both draw from the same working memory pool, so reducing extraneous load frees capacity for germane load."
+      },
+      "zoom_out_0": {
+        "question": "Why is it important for teachers to distinguish between the three types of cognitive load?",
+        "answer": "Only extraneous load should be minimised by design — intrinsic load defines the learning challenge and germane load is the learning itself. Collapsing the distinction leads to removing difficulty indiscriminately, which impairs learning rather than supporting it."
+      },
+      "zoom_out_1": {
+        "question": "How has the three-type cognitive load model been revised since its introduction?",
+        "answer": "Later work by Kalyuga and Sweller questioned whether germane load is genuinely distinct from intrinsic load, proposing a simpler two-component model (intrinsic + extraneous). The three-type framework remains widely used in instructional design despite this theoretical debate."
+      }
+    }
+  },
+  {
+    "id": "card-003",
+    "active_version": "original",
+    "topic": "Cognitive Load Theory",
+    "source_id": "clt-working-memory",
+    "spacing": "default",
+    "next_due_day": 0,
+    "interval_index": 0,
+    "versions": {
+      "original": {
+        "question": "What are the key capacity constraints of working memory that cognitive load theory is built on?",
+        "answer": "Working memory can hold approximately 4 ± 1 elements simultaneously and retains information for only ~20 seconds without rehearsal — making it a severe bottleneck on how much can be processed during learning."
+      },
+      "zoom_in_0": {
+        "question": "How does element interactivity push learners into cognitive overload even when individual elements are simple?",
+        "answer": "High-interactivity material requires multiple elements to be held and integrated at the same time. Even if each element is trivially simple alone, the simultaneous integration demand can exceed working memory capacity."
+      },
+      "zoom_in_1": {
+        "question": "How does long-term memory effectively expand working memory capacity for expert learners?",
+        "answer": "Well-formed schemas stored in long-term memory can be retrieved as single elements in working memory. This chunking means experts hold the equivalent of many raw elements in one 'slot', allowing them to handle complexity that would overwhelm novices."
+      },
+      "zoom_out_0": {
+        "question": "How do working memory limitations fit within the broader Atkinson–Shiffrin information processing model?",
+        "answer": "Working memory is the bottleneck in the model — information must be actively processed here before it can be encoded into long-term memory. Its limits therefore constrain not just immediate performance but the rate at which lasting knowledge is built."
+      },
+      "zoom_out_1": {
+        "question": "What are the core practical implications of working memory limits for instructional sequencing?",
+        "answer": "Material should be segmented, sequenced from low to high element interactivity, and stripped of redundant information — so that at every stage, learners can form schemas without exceeding working memory capacity."
+      }
+    }
+  },
+  {
+    "id": "card-004",
+    "active_version": "original",
+    "topic": "Cognitive Load Theory",
+    "source_id": "clt-worked-examples",
+    "spacing": "default",
+    "next_due_day": 0,
+    "interval_index": 0,
+    "versions": {
+      "original": {
+        "question": "What is the worked example effect?",
+        "answer": "Novice learners acquire schemas more efficiently from studying fully worked-out solutions than from solving equivalent problems themselves, because problem-solving overloads working memory with means-ends analysis rather than freeing it for schema formation."
+      },
+      "zoom_in_0": {
+        "question": "Why does conventional problem-solving overload novices compared to studying worked examples?",
+        "answer": "Problem-solving requires simultaneously holding a goal state, current state, and multiple sub-goals while searching for bridging operators — a working memory demand that leaves little capacity for understanding the underlying relationships between steps."
+      },
+      "zoom_in_1": {
+        "question": "What is the completion problem effect and how does it extend worked example research?",
+        "answer": "Partially completed solutions — some steps provided, learner finishes the rest — bridge the gap between full worked examples and independent problem-solving, reducing cognitive load while still requiring active processing. They are more effective than either extreme for learners at an intermediate stage."
+      },
+      "zoom_out_0": {
+        "question": "How does the worked example effect connect to the expertise reversal effect?",
+        "answer": "The benefit of worked examples diminishes as learners gain expertise; at higher skill levels, studying full solutions becomes redundant and independent problem-solving becomes more efficient — the effect literally reverses, showing that optimal guidance depends on current knowledge level."
+      },
+      "zoom_out_1": {
+        "question": "What does the worked example effect imply for curriculum sequencing?",
+        "answer": "Instruction should front-load worked examples for novices, then systematically fade guidance (the fading procedure) as learners automate schemas — transitioning from full solutions to partial completions to independent problem-solving as expertise grows."
+      }
+    }
+  },
+  {
+    "id": "card-005",
+    "active_version": "original",
+    "topic": "Cognitive Load Theory",
+    "source_id": "clt-split-attention",
+    "spacing": "default",
+    "next_due_day": 1,
+    "interval_index": 0,
+    "versions": {
+      "original": {
+        "question": "What is the split-attention effect?",
+        "answer": "When learners must mentally integrate multiple sources of information presented separately (e.g. a diagram with a remote legend), the integration process itself adds extraneous load that impairs learning — independent of the content difficulty."
+      },
+      "zoom_in_0": {
+        "question": "What is the cognitive mechanism by which physically separated information adds load?",
+        "answer": "The learner must hold one source in working memory while locating and reading another, then integrate them. Working memory is consumed by navigation and integration rather than by understanding the material."
+      },
+      "zoom_in_1": {
+        "question": "What is the design solution to the split-attention effect?",
+        "answer": "Physical integration of related information sources — embed labels directly on diagrams, place explanatory text immediately adjacent to the relevant visual, and avoid any layout that forces the learner to cross-reference separated elements."
+      },
+      "zoom_out_0": {
+        "question": "How does the split-attention effect relate to the redundancy effect?",
+        "answer": "They are complementary principles: split-attention says integrate sources that must be combined to make sense; redundancy says eliminate sources that duplicate information already fully conveyed by another. Both concern how the number and arrangement of information sources affects extraneous load."
+      },
+      "zoom_out_1": {
+        "question": "Where does the split-attention effect manifest in everyday instructional design?",
+        "answer": "Figures and captions placed far apart in textbooks; slides where the speaker reads out a paragraph of text; software tutorials with instructions on a separate screen from the task — all create split-attention by forcing the learner to integrate physically or temporally separated sources."
+      }
+    }
+  },
+  {
+    "id": "card-006",
+    "active_version": "original",
+    "topic": "Cognitive Load Theory",
+    "source_id": "clt-expertise-reversal",
+    "spacing": "default",
+    "next_due_day": 1,
+    "interval_index": 0,
+    "versions": {
+      "original": {
+        "question": "What is the expertise reversal effect?",
+        "answer": "Instructional techniques that benefit novices (e.g. detailed worked examples, integrated diagrams) become less effective and can become actively harmful for advanced learners, who learn better with reduced guidance and independent problem-solving."
+      },
+      "zoom_in_0": {
+        "question": "Why does detailed instructional guidance become harmful for expert learners?",
+        "answer": "Experts already possess the relevant schemas in long-term memory. Processing redundant guidance consumes working memory without contributing new knowledge — it creates extraneous load rather than supporting schema formation."
+      },
+      "zoom_in_1": {
+        "question": "What is the direct instructional implication of the expertise reversal effect?",
+        "answer": "Guidance must be dynamically faded as learner expertise grows — a single fixed level of scaffolding cannot be optimal across a learning trajectory. Adaptive or personalised instruction is theoretically required for maximum efficiency."
+      },
+      "zoom_out_0": {
+        "question": "How does the expertise reversal effect challenge universal instructional design principles?",
+        "answer": "It demonstrates that no strategy is universally optimal — instructional effectiveness is always relative to learner prior knowledge. Principles derived from novice performance cannot simply be generalised across all learners."
+      },
+      "zoom_out_1": {
+        "question": "How does the expertise reversal effect connect to the concept of desirable difficulties?",
+        "answer": "Both show that making learning easier is not always better. For advanced learners, reducing guidance and introducing retrieval practice, interleaving, or spacing (desirable difficulties) promotes deeper encoding and stronger long-term retention, even at the cost of short-term performance."
+      }
+    }
+  }
+]
