@@ -14,10 +14,33 @@
       <span id="header-label">Flashcards</span>
     </div>
     <div class="header-right">
+      <button id="whats-different-btn" aria-haspopup="dialog" aria-controls="whats-different-dialog">What's different</button>
       <span id="day-indicator">Day 0</span>
       <button id="end-session-btn">End Session</button>
     </div>
   </header>
+
+  <div id="whats-different-dialog" class="info-modal" aria-hidden="true">
+    <div class="info-modal__backdrop" data-close-modal="true"></div>
+    <section class="info-modal__panel" role="dialog" aria-modal="true" aria-labelledby="whats-different-title">
+      <div class="info-modal__head">
+        <h2 id="whats-different-title">What's different</h2>
+        <button id="close-whats-different-btn" class="info-modal__close" aria-label="Close dialog">✕</button>
+      </div>
+
+      <p class="info-modal__intro">This experiment explores the following possible changes to how flashcards can be done:</p>
+      <ul class="info-modal__list">
+        <li>A scrolling experience rather than traditional cards, which may (or may not) result in a more engaging experience when reviewing cards</li>
+        <li>With the scrolling experience, users have a better awareness of the whole session (what has been done and what is yet to be done)</li>
+        <li>AI is present, but it is embedded into the scroll and interacted with through options and optional instructions rather than the typical chat on the side (see the Not sure explanation below)</li>
+        <li>Adding the 'Not sure' option as cards review status is not always black/white. Users may want more options, and here we explore a couple</li>
+        <li>Giving the user the options to review more/less frequently</li>
+        <li>Giving the user the option to update the card itself. This is based on a few ideas including forcing them to think more about it (memory is the residue of thought), so even if they end up cancelling, they are more likely to remember it better</li>
+        <li>Giving the option to zoom in/out the details of the card, with the option of giving instructions to AI to influence how it is updated.</li>
+        <li>Giving the user two options to pick from when a card is updated.</li>
+      </ul>
+    </section>
+  </div>
 
   <div id="feed"></div>
 

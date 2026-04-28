@@ -36,6 +36,10 @@ body {
   min-height: 100vh;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 /* ── Header ─────────────────────────────────────────────────────────── */
 
 #app-header {
@@ -85,6 +89,110 @@ body {
   transition: background 0.15s, color 0.15s;
 }
 #end-session-btn:hover { background: var(--btn-forgot); color: #fff; }
+
+#whats-different-btn {
+  background: var(--green-faint);
+  border: 1.5px solid #9ccc9f;
+  color: var(--green-dark);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+#whats-different-btn:hover {
+  background: #d9efd9;
+  border-color: #84b889;
+}
+
+/* ── What's different modal ──────────────────────────────────────────── */
+
+.info-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 220;
+  display: none;
+}
+
+.info-modal.is-open {
+  display: block;
+}
+
+.info-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(23, 39, 25, 0.46);
+  backdrop-filter: blur(2px);
+}
+
+.info-modal__panel {
+  position: relative;
+  width: min(760px, calc(100vw - 28px));
+  max-height: min(82vh, 820px);
+  overflow: auto;
+  margin: 70px auto 24px;
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid #d9e6d9;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+  padding: 20px 22px 22px;
+  animation: rise 0.2s ease;
+}
+
+.info-modal__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.info-modal__head h2 {
+  font-size: 23px;
+  color: var(--green-dark);
+  line-height: 1.2;
+}
+
+.info-modal__close {
+  border: 1.5px solid #d8d8d8;
+  background: #fff;
+  color: #666;
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.12s, border-color 0.12s;
+  flex: 0 0 auto;
+}
+
+.info-modal__close:hover {
+  background: #f4f4f4;
+  border-color: #bdbdbd;
+}
+
+.info-modal__intro {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #4b4b4b;
+  margin-bottom: 10px;
+}
+
+.info-modal__list {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-modal__list li {
+  color: #2f2f2f;
+  font-size: 14px;
+  line-height: 1.55;
+}
 
 /* ── Feed ────────────────────────────────────────────────────────────── */
 
@@ -544,4 +652,22 @@ body {
   .btn-action    { font-size: 13px; padding: 12px 6px; }
   .section-actions { flex-direction: column; }
   .alt-card { min-width: calc(85vw); }
+
+  .header-right {
+    gap: 8px;
+  }
+
+  #whats-different-btn {
+    font-size: 11px;
+    padding: 6px 9px;
+  }
+
+  .info-modal__panel {
+    margin-top: 62px;
+    padding: 16px;
+  }
+
+  .info-modal__head h2 {
+    font-size: 20px;
+  }
 }

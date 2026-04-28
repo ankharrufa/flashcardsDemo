@@ -401,6 +401,39 @@ document.getElementById('end-session-btn').addEventListener('click', () => {
   document.getElementById('session-end')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
 
+const whatsDifferentBtn = document.getElementById('whats-different-btn');
+const closeWhatsDifferentBtn = document.getElementById('close-whats-different-btn');
+const whatsDifferentDialog = document.getElementById('whats-different-dialog');
+
+function openWhatsDifferent() {
+  if (!whatsDifferentDialog) return;
+  whatsDifferentDialog.classList.add('is-open');
+  whatsDifferentDialog.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('modal-open');
+}
+
+function closeWhatsDifferent() {
+  if (!whatsDifferentDialog) return;
+  whatsDifferentDialog.classList.remove('is-open');
+  whatsDifferentDialog.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('modal-open');
+}
+
+whatsDifferentBtn?.addEventListener('click', openWhatsDifferent);
+closeWhatsDifferentBtn?.addEventListener('click', closeWhatsDifferent);
+
+whatsDifferentDialog?.addEventListener('click', (ev) => {
+  const target = ev.target;
+  if (!(target instanceof Element)) return;
+  if (target.matches('[data-close-modal="true"]')) closeWhatsDifferent();
+});
+
+document.addEventListener('keydown', (ev) => {
+  if (ev.key === 'Escape' && whatsDifferentDialog?.classList.contains('is-open')) {
+    closeWhatsDifferent();
+  }
+});
+
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
 function freezeActionRow(instId, selectedClass) {
