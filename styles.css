@@ -106,6 +106,15 @@ body {
   overflow: hidden;
 }
 
+.card-item.card-forgot-fadeout {
+  animation: forgotFadeOut 0.52s cubic-bezier(.22,.61,.36,1) forwards;
+  pointer-events: none;
+}
+
+.card-item.card-forgot-enter {
+  animation: forgotReappear 0.35s ease-out;
+}
+
 .card-meta {
   display: flex;
   align-items: center;
@@ -200,6 +209,26 @@ body {
 .btn-forgot   { background: var(--btn-forgot);  }
 .btn-schedule { background: var(--btn-sched);   }
 .btn-notsure  { background: var(--btn-notsure); }
+
+.btn-schedule {
+  white-space: normal;
+  line-height: 1.12;
+  text-align: center;
+}
+
+.btn-schedule .sched-main {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btn-schedule .sched-sub {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  opacity: 0.95;
+  margin-top: 2px;
+}
 
 .btn-action.btn-selected {
   outline: 2.5px solid rgba(255,255,255,0.75);
@@ -472,6 +501,40 @@ body {
 @keyframes rise {
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes forgotFadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+  }
+  35% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+  }
+  75% {
+    opacity: 0.35;
+    transform: translateY(0);
+    filter: blur(0.35px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+    filter: blur(0.9px);
+  }
+}
+
+@keyframes forgotReappear {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ── Responsive ──────────────────────────────────────────────────────── */

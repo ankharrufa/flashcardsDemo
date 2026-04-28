@@ -95,8 +95,11 @@ function buildCard(instId) {
         </div>
         <div class="action-row" id="act-${instId}">
           <button class="btn-action btn-forgot"   onclick="doForgot('${instId}')">Forgot</button>
-          <button class="btn-action btn-schedule" onclick="doSchedule('${instId}')">Show in ${n} day${n !== 1 ? 's' : ''}</button>
           <button class="btn-action btn-notsure"  onclick="doNotSure('${instId}')">Not sure</button>
+          <button class="btn-action btn-schedule" onclick="doSchedule('${instId}')">
+            <span class="sched-main">Remembered</span>
+            <span class="sched-sub">See in ${n} day${n !== 1 ? 's' : ''}</span>
+          </button>
         </div>
         <div class="ns-flow" id="ns-${instId}"></div>
       </div>
@@ -165,14 +168,37 @@ function doForgot(instId) {
   freezeActionRow(instId, 'btn-forgot');
   card._forgotThisSession = true;
 
-  // Append a fresh unrevealed duplicate before the boundary
-  const newId  = newInst(card);
-  const feed   = document.getElementById('feed');
-  const anchor = document.getElementById('session-boundary') || document.getElementById('session-end');
-  feed.insertBefore(buildCard(newId), anchor);
+  const feed = document.getElementById('feed');
+  const cardEl = document.querySelector(`[data-inst="${instId}"]`);
+  if (!cardEl || !feed) return;
 
-  refreshCounters();
-  updateHeader();
+  const currentCards = Array.from(feed.querySelectorAll('.card-item'));
+  const currentIdx = currentCards.indexOf(cardEl);
+  const trailingCards = currentCards.slice(currentIdx + 1);
+  const prevTops = new Map(trailingCards.map(el => [el, el.getBoundingClientRect().top]));
+
+  cardEl.classList.add('card-forgot-fadeout');
+
+  const onDone = () => {
+    cardEl.removeEventListener('animationend', onDone);
+    cardEl.remove();
+
+    animateListReflow(trailingCards, prevTops);
+
+    // Reinsert as a fresh unrevealed card before the boundary so it effectively
+    // moves to the bottom of the current stack.
+    const newId  = newInst(card);
+    const anchor = document.getElementById('session-boundary') || document.getElementById('session-end');
+    const movedEl = buildCard(newId);
+    movedEl.classList.add('card-forgot-enter');
+
+    feed.insertBefore(movedEl, anchor);
+
+    refreshCounters();
+    updateHeader();
+  };
+
+  cardEl.addEventListener('animationend', onDone, { once: true });
 }
 
 function doSchedule(instId) {
@@ -418,6 +444,27 @@ function freezeOpts(clickedBtn) {
 function nextN(card) {
   const sched = SCHEDULES[card.spacing] || SCHEDULES.default;
   return sched[Math.min(card.interval_index || 0, sched.length - 1)];
+}
+
+function animateListReflow(items, prevTops) {
+  items.forEach(el => {
+    const oldTop = prevTops.get(el);
+    if (oldTop === undefined) return;
+    const newTop = el.getBoundingClientRect().top;
+    const deltaY = oldTop - newTop;
+    if (Math.abs(deltaY) < 1) return;
+
+    el.animate(
+      [
+        { transform: `translateY(${deltaY}px)` },
+        { transform: 'translateY(0)' },
+      ],
+      {
+        duration: 280,
+        easing: 'cubic-bezier(.22,.61,.36,1)',
+      }
+    );
+  });
 }
 
 function refreshCounters() {
